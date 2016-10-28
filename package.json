@@ -5,15 +5,18 @@
   "license": "MIT",
   "dependencies": {
     "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.7",
     "babel-preset-react": "^6.16.0",
     "react": "^15.3.2",
+    "react-clock": "^1.0.5",
     "react-dom": "^15.3.2",
-    "serve": "^1.4.0"
+    "serve": "^1.4.0",
+    "webpack": "^1.13.3"
   },
   "scripts": {
-    "build": "node_modules/.bin/babel src -d lib",
-    "build-style": "cp src/styles.css lib/styles.css",
-    "build-static": "cp src/index.html lib/index.html",
-    "serve": "node_modules/.bin/serve lib"
+    "build": "node_modules/.bin/webpack",
+    "build-style": "cp app/styles.css dist/styles.css",
+    "build-static": "cp app/index.html dist/index.html",
+    "serve": "node_modules/.bin/serve dist"
   }
 }

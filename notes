@@ -1,0 +1,75 @@
+React Dashboard Workflow Test
+
+yarn is awesome
+
+use babel
+
+yarn can run named scripts with yarn run <NAME>
+
+
+babel can build react projects
+
+echo '{ "presets": ["react"] }' > .babelrc
+
+React + ES2015
+
+yarn run build # builds src into lib with babel
+
+yarn run serve # runs with npm serve
+
+open questions: style? multi file? minified?
+
+yarn run build-style solves the style problem.
+
+To get to this point:
+
+yarn add babel
+yarn add serve
+yarn add babel-react-preset
+echo '{ "presets": ["react"] }' > .babelrc
+
+# edit package.json scripts
+"build": "node_modules/.bin/babel src -d lib",
+"build-style": "cp src/styles.css lib/styles.css",
+"build-static": "cp src/index.html lib/index.html",
+"serve": "node_modules/.bin/serve lib"
+
+------
+
+OK so webpack is up and running
+
+https://tylermcginnis.com/react-js-tutorial-1-5-utilizing-webpack-and-babel-to-build-a-react-js-app-5f804d729d3b#.scmw5h1nq
+
+yarn add webpack
+
+```
+# webpack.config.json
+module.exports = {
+  entry: [
+    './app/index.js'
+  ],
+  output: {
+    path: __dirname + '/dist',
+    filename: "index_bundle.js"
+  },
+  module: {
+    loaders: [
+      {test: /\.js$/, include: __dirname + '/app', loader: "babel-loader"}
+    ]
+  }
+};
+```
+
+now i can
+
+```
+yarn add react-clock
+
+...
+
+var clock = require('react-clock')
+var my_clock = <Clock />
+ReactDOM.render(my_clock, document.getElementById('root'));
+```
+
+which is nice
