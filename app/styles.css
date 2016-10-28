@@ -1,0 +1,18 @@
+body {
+  background: black;
+  color: white;
+}
+
+.container {
+  margin: 3%;
+}
+
+.content {
+
+}
+
+#clock-container {
+  font-size: 40px;
+  font-family: 'Titillium Web', sans-serif;
+  float: right;
+}

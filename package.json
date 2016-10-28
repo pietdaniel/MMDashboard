@@ -15,8 +15,8 @@
   },
   "scripts": {
     "build": "node_modules/.bin/webpack",
-    "build-style": "cp app/styles.css dist/styles.css",
     "build-static": "cp app/index.html dist/index.html",
+    "build-style": "cp app/styles.css dist/styles.css",
     "serve": "node_modules/.bin/serve dist"
   }
 }
