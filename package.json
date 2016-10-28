@@ -1,0 +1,19 @@
+{
+  "name": "hello-world-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "serve": "^1.4.0"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/babel src -d lib",
+    "build-style": "cp src/styles.css lib/styles.css",
+    "build-static": "cp src/index.html lib/index.html",
+    "serve": "node_modules/.bin/serve lib"
+  }
+}

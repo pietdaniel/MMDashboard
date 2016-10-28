@@ -1,0 +1,20 @@
+React Dashboard Workflow Test
+
+yarn is awesome
+
+use babel
+
+yarn can run named scripts with yarn run <NAME>
+
+
+babel can build react projects
+
+echo '{ "presets": ["react"] }' > .babelrc
+
+React + ES2015
+
+yarn run build # builds src into lib with babel
+
+yarn run serve # runs with npm serve
+
+open questions: style? multi file? minified?
